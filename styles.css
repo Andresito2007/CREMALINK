@@ -1,0 +1,548 @@
+/* quitamos los estilos por defecto del navegador*/
+* { /* con el selector ¨* universal*/
+  margin: 0; /*margen*/
+  padding: 0; /*espacio interior*/
+  box-sizing: border-box; /*usamos esta propiedad para incluir el padding en nuestra pagina*/
+}
+/*usamos el selector root que es la raiz del documento (elemento html de la pagina)*/
+:root {
+      --crema-principal: #F4E7D7;
+      --crema-oscuro: #D4B896;
+      --rojo-universitario: #8B0000;
+      --dorado: #FFD700;
+      --gris-oscuro: #1a1a1a;
+      --gris-medio: #2a2a2a;
+    }
+    /*le ponemos estilos a nuestro cuerpo */
+body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, var(--crema-principal) 0%, var(--crema-oscuro) 100%);
+      min-height: 100vh;
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+/* 1ERA PARTE (color de fondo de mi pagina)*/ /* le ponemos estilo a la nuestra barra navegacion */
+/* navegacion */
+.navbar {
+      background: var(--rojo-universitario) !important;
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+.nav-logo {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+.logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, var(--crema-principal), var(--dorado));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 2px;
+    }
+/* estilos a (INICIO, MIS RESERVAS) */
+.navbar-nav .nav-link {
+      color: var(--crema-principal) !important;
+      font-weight: 600;
+      margin: 0 10px;
+      padding: 8px 20px !important;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+.navbar-nav .nav-link:hover {
+      color: white !important;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+.navbar-nav .nav-link.active {
+      color: white !important;
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+/* 2 PARTE (EL ESTILO A NUESTRA NAVEGACION) , EL COLOR DE FONDO DE LA NAVEGACION NEGRO , EL LOGO .*/
+.main-container { /* le damos  estilos a nuestro contendor principal*/
+  margin-top: 80px;  /*definimos una altura minima*/
+  min-height: calc(100vh - 80px); /*calc() para hacer operaciones matematicaa en nuestro CSS.*/
+}
+/* SECCION DE PARTIDOS (Columna Izquierda) */
+.partidos-section {
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+}
+/* estilo a nuestro  "BARCELINK" */
+.tituloprincipal {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--dorado);
+  margin-bottom: 10px;
+}
+/*  estilos a subtitulo de "RESERVA TUS ENTRADAS" */
+.subtitulo {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+}
+/* el scroll osea donde se desplazan los partidos */
+.partidos-scroll {
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  padding-right: 15px;
+}
+/* ESTILOS A LAS TARJETAS DE CADA PARTIDO*/
+.partido-card {
+      background: linear-gradient(135deg, rgba(244, 231, 215, 0.9), rgba(212, 184, 150, 0.9));
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 20px;
+      border: 2px solid var(--rojo-universitario);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+/* nuestro efecto al pasar el mouse */
+.partido-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-color: var(--dorado);
+}
+/* Estilo a nuestro encabezado de  "LaLiga" y fecha */
+.encabezado-partido {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+/* estilo al badge "LaLiga" */
+.competicion {
+  background: var(--dorado);
+  color: var(--azul-oscuro);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+/*  estilo a la fecha del partido */
+.fecha {
+  font-weight: 600;
+  color: white;
+}
+/* Estilo al  Contenedor de los dos equipos y el "VS" */
+.partidos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+/* Estilo a cada equipo (logo + nombre) */
+.equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+/* Estilo logo del equipo */
+.logo-de-equipo {
+  width: 60px;
+  height: 60px;
+}
+/* Estilo al nombre del equipo */
+.nombre-de-equipo {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+/* Estilo Texto "VS" ose versus  */
+.vs {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--dorado);
+}
+/* 
+/* SECCION DEL ESTADIO Y EL JUGADOR (GARRINCHA)  */
+.btn-reservar {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  padding: 12px;
+  background: linear-gradient(45deg, var(--rojo-universitario), #5A0000);
+  color: var(--crema-principal);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+}
+
+.estadio-section {
+  position: relative;
+  overflow: hidden;
+}
+.contenedor-estadio-jugador {
+  position: relative;
+  height: 100vh;
+}
+/* estilo a las imagenes del estadio/jugador */
+.estadio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+/* T¿estilo al texto sobre la imagen */
+.imagenes-principales {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 80%;
+}
+.imagenes-principales h2 {
+  font-size: 3rem;
+  color: var(--dorado);
+  font-weight: 800;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+.imagenes-principales p {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+/* estilos a nuestro modal (nuestra ventana que aparecera cuando demos en reservar) */
+.modal-content {
+  background: linear-gradient(135deg, var(--gris-oscuro), var(--gris-medio));
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: white;
+}
+.modal-header {
+  border-bottom: 2px solid var(--dorado);
+  padding: 20px 30px;
+}
+.modal-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.modal-body {
+  padding: 30px;
+}
+/*Estilos a las opciones de tipo de entrada (Normal, Premium, VIP) */
+.tipo-entrada-section h6 {
+  font-weight: 700;
+  margin: 25px 0 15px;
+  font-size: 1.1rem;
+  color: var(--dorado);
+}
+.opciones-de-entradas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+/* estilo a cada opcion (Normal, Premium, VIP) */
+.eleccion-de-entrada label {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+/* estilo Cuando seleccionamos una opción */
+.eleccion-de-entrada input:checked + label {
+  background: linear-gradient(45deg, var(--azul-barca), var(--azul-oscuro));
+  border-color: var(--dorado);
+  box-shadow: 0 4px 15px yellow;
+}
+.entrada-nombre {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.precio-de-entrada {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--dorado);
+}
+/* estilo a la seccion de cantidad */
+.seccion-cantidad {
+  margin: 25px 0;
+}
+.seccion-cantidad label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--dorado);
+}
+.seccion-cantidad input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+}
+/* estilos al total a pagar */
+.seccion-total {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(253, 185, 19, 0.1);
+  border: 2px solid var(--dorado);
+  border-radius: 12px;
+  text-align: center;
+}
+.seccion-total h6 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.seccion-total span {
+  color: var(--dorado);
+  font-size: 1.8rem;
+}
+/* estilo a los botones del modal */
+.modal-footer {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+}
+.modal-footer .btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+.modal-footer .btn-primary {
+  background: linear-gradient(45deg, var(--azul-barca), var(--azul-oscuro));
+  border: none;
+  font-weight: 700;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+/* ESTILO A LA PAGINA DE RESERVAS */
+.seccion-de-reservas {
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.reservas-scroll {
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  padding-right: 15px;
+}
+/* Estilo a la Tabla de reservas */
+.tabla-reservas {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  margin-bottom: 30px;
+}
+/* Estilo al Encabezado de la tabla */
+
+.tabla-reservas thead th {
+      background: linear-gradient(45deg, var(--rojo-universitario), #5A0000);
+      padding: 15px;
+      text-align: left;
+      font-weight: 700;
+      color: white;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+.tabla-reservas thead th:first-child {
+  border-radius: 12px 0 0 12px;
+}
+.tabla-reservas thead th:last-child {
+  border-radius: 0 12px 12px 0;
+}
+/* Estilo a las Filas de la tabla */
+.tabla-reservas tbody tr {
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s;
+}
+.tabla-reservas tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+.tabla-reservas tbody td {
+  padding: 20px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.tabla-reservas tbody tr td:first-child {
+  border-radius: 12px 0 0 12px;
+}
+.tabla-reservas tbody tr td:last-child {
+  border-radius: 0 12px 12px 0;
+}
+/* Estilos a los Badges de tipo de entrada (Normal, Premium, VIP) */
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.badge-normal {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+}
+.badge-premium {
+  background: linear-gradient(45deg, #6f42c1, #e83e8c);
+  color: white;
+}
+.badge-vip {
+  background: linear-gradient(45deg, var(--dorado), #ff9800);
+  color: white;
+}
+/* Estilos al Boton Cancelar (individual) */
+.btn-cancelar {
+  padding: 8px 16px;
+  background: linear-gradient(45deg, #dc3545, #c82333);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-cancelar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+}
+/* Estilos al Resumen (Total reservas, entradas, a pagar) */
+.resumen-card {
+  background: linear-gradient(135deg, rgba(0, 77, 152, 0.3), rgba(165, 0, 68, 0.3));
+  border-radius: 15px;
+  padding: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  margin: 30px 0;
+}
+.resumen-card h5 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: var(--dorado);
+}
+.resumen-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.resumen-item.total {
+  font-size: 1.2rem;
+  padding-top: 20px;
+  margin-top: 10px;
+  border-top: 2px solid var(--dorado);
+  border-bottom: none;
+}
+.resumen-item.total strong {
+  color: var(--dorado);
+  font-size: 1.5rem;
+}
+/* estilos al boton Cancelar Todas */
+.btn-cancelar-todas {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #dc3545, #bd2130);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 25px;
+}
+.btn-cancelar-todas:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.6);
+}
+/* Nuestro Responsive , usando media queries para tener nuestra pagina adaptable a los dispositivoss moviles o tablets , podemos usar max-width y  min-width  */
+/* el max-width nos indicara cual va ser el valor maximo que va tener para que se aplique el estilo dentro de nuestra media , las media son como las condicionales como if , else*/
+/* Nuestro responsive PARA TABLETS Y MENORES (menor a 992px) */
+@media (max-width: 991px) {
+  /*para ocultar imagen del estadio en tablets y celures */
+  .estadio-section {
+    display: none !important;
+  }
+  /* Las secciones ocupan todo el ancho */
+  .partidos-section,
+  .seccion-de-reservas {
+    width: 100% !important;
+  }
+  .tituloprincipal {
+    font-size: 2.5rem;
+  }
+}
+/* responsive para celulares(menos de 768px) */
+@media (max-width: 768px) {
+  .main-container {
+    margin-top: 70px;
+  }
+  .partidos-section,
+  .seccion-de-reservas {
+    padding: 20px 15px;
+  }
+  /*Los partidos en vertical */
+  .partidos {
+    flex-direction: column;
+  }
+  /* poner en vewrtical el "VS" */
+  .vs {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+  /* Logos mas pequeños */
+  .logo-de-equipo {
+    width: 50px;
+    height: 50px;
+  }
+  /* Tabla mas compacta */
+  .tabla-reservas {
+    font-size: 0.85rem;
+  }
+  .tabla-reservas thead th,
+  .tabla-reservas tbody td {
+    padding: 10px 8px;
+  }
+}
+/* responsive para celulares (menos de 576px) */
+@media (max-width: 576px) {
+  /* Navbar mas pequeño */
+  .nav-logo {
+    width: 30px;
+    height: 30px;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .main-container {
+    margin-top: 60px;
+  }
+  .tituloprincipal {
+    font-size: 1.8rem;
+  }
+  .subtitulo {
+    font-size: 0.9rem;
+  }
+  /* Tarjetas mas compactas */
+  .partido-card {
+    padding: 20px 15px;
+  }
+  .logo-de-equipo {
+    width: 45px;
+    height: 45px;
+  }
+  /* Tabla con scroll horizontal */
+  .tabla-reservas {
+    min-width: 600px;
+  }
+}

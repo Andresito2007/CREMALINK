@@ -1,0 +1,119 @@
+<!DOCTYPE html><!--DECLARAMOS NUESTRO DOCUMENTO HTML5-->
+<html lang="es">
+<head> <!--El head la parte no visible de nuestra pagina web-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CREMALINK - Mis Reservas</title><!--El titulo de nuestra pagina wweb (la parte no visible)-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><!--usare la herramienta bootstrap para los estilos y el responsive-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css"><!--vinculamos con css para aplicar estilos-->
+</head>
+<!--el body la parte visible de nuestra pagina web-->
+<body>
+<!-- Navegación -->
+<!--aqui creo mi barra de navegacion usando Bootstrap,-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<!--class es un atributo que usamos para asignar clases a un elemento-->
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="https://th.bing.com/th/id/OIP.PtfIzGAOyM588b2DBT8yUQHaHZ?w=200&h=199&c=7&r=0&o=7&pid=1.7&rm=3" alt="FC Barcelona"
+          class="nav-logo me-2"> <!--el alt lo usamos en las imagenes para describir lo que tienen dentro osea su contenido-->
+        <span class="logo">CREMALINK</span> <!--el span sirve para un texto diferente , osea darle un resaltado-->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav"> <!--id=identificador-->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="reservas.html">MIS RESERVAS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- Contenido Principal -->
+<!--aca con boostrap y su sistema de rejillas dividimos la pagina web en dos partes-->
+  <div class="main-container">
+    <div class="container-fluid">
+      <div class="row g-0">
+<!-- Columna Izquierda - Tabla de Reservas -->
+        <div class="col-lg-6 seccion-de-reservas"> <!--cada partido estara dentro de una tarjeta-->
+          <div class="reservas-header">
+            <h1 class="tituloprincipal">Mis Reservas</h1>
+            <p class="subtitulo">GESTIONA TUS ENTRADAS RESERVADAS</p>
+          </div>
+          <div class="reservas-scroll">
+            <div class="table-responsive">
+              <table class="tabla-reservas">
+<!--uso la etiqueta thead para definir mi encabezado de mi tabla  de reservas-->
+                <thead> <!--la etiqueta thead dentro de la tabla -->
+                  <tr> <!--las filas de la tabla (->)  -->
+                    <th>PARTIDO</th> <!--las columnas de la tabla (abajo)-->
+                    <th>FECHA</th>
+                    <th>TIPO</th>
+                    <th>CANTIDAD</th>
+                    <th>TOTAL</th>
+                    <th>CANCELACION</th>
+                  </tr>
+                </thead>
+                <tbody>
+<!--usamos la etiqueta <tbody> para agrupar las filas de nuestros datos del tr dentro de nuestra tabla-->
+                </tbody>
+              </table>
+            </div>
+<!-- mi seccion Resumen donde muestro los número de reservas, la cantidad total de entradas y el monto total a pagar.-->
+<!--ya hay una cantidad hecha usada como ejemplo-->
+            <div class="resumen-section">
+              <div class="resumen-card">
+                <h5>RESUMEN</h5>
+                <div class="resumen-item">
+                  <span>Total de reservas:</span>
+                  <strong id="totalReservas"></strong>
+                </div>
+                <div class="resumen-item">
+                  <span>Total de entradas:</span>
+                  <strong id="totalEntradas"></strong>
+                </div>
+                <div class="resumen-item total">
+                  <span>Total a pagar:</span>
+                  <strong id="totalPagar"></strong>
+                </div>
+              </div>
+            </div>
+            <div class="accion-de-cancelartodaslasentradas"> <!--nuestra accion de cancelar todo nuestras reservas-->
+              <button class="btn-cancelar-todas">
+                Cancelar Todas las Reservas
+              </button>
+            </div>
+          </div>
+        </div>
+<!-- Columna Derecha - imagen del jugador garrincha y tambien un dato sobre el-->
+        <div class="col-lg-6 estadio-section">
+          <div class="contenedor-estadio-jugador">
+            <img src=https://i.pinimg.com/736x/6f/db/ca/6fdbca116f7316b220dbaca69da82363.jpg
+              alt="Camp Nou" class="estadio-img">
+            <div class="imagenes-principales">
+              <h2>EL MEJOR EQUIPO DEL PERU</h2> <!--nombre del jugador (leyenda de brasil : ) , Usted hablo de el en clase) -->
+              <p> </p> <!-- ponemos un dato en nuestro parrafo-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--CREAMOS NUESTRO FOOTER (LA PARTE FINAL DE NUESTRA PAGINA WEB (EL PIE))-->
+  <footer class="footer text-center py-3"> <!---Centramos nuestro foter-->
+    <p>CREMALINK | Todos los derechos reservados ⚽</p>
+    <p>TELEFONO : 61198</p>
+    <p>SEDE : VILLA EL SALVADOR</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!--el scritp de bootstrap para agregar luego el js-->
+  <script src="javascritp.js"> </script>
+</body>
+</html>

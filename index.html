@@ -1,0 +1,249 @@
+<!DOCTYPE html> <!--DECLARAMOS NUESTRO DOCUMENTO HTML CON HTML5-->
+<html lang="es">
+<head> <!--El head la parte no visible de nuestra pagina web-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CREMALINK - Reserva tus entradas</title> <!--El titulo de nuestra pagina wweb (la parte no visible)-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--usare la herramienta bootstrap para los estilos y el responsive-->
+  <link rel="stylesheet" href="styles.css"><!--vinculamos con css para aplicar estilos-->
+</head>
+<body>
+<!-- navegacion-->
+<!--definimos la seccion de navegacion con <nav>-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<!--usamos los atributos de bstrp navbar y navbar-expand-lg para que se adapte a distintas pantallas.-->
+    <div class="container-fluid px-4"> <!--class es un atributo que usamos para asignar clases a un elemento-->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="https://th.bing.com/th/id/OIP.PtfIzGAOyM588b2DBT8yUQHaHZ?w=200&h=199&c=7&r=0&o=7&pid=1.7&rm=3" alt="FC Barcelona"
+          class="nav-logo me-2">
+        <span class="logo">CREMALINK</span> <!--el span sirve para un texto diferente , osea darle un resaltado-->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span> 
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+<!--Este contenedor permite que el menú se oculte o se muestre automáticamente según el tamaño de la pantalla. (osea en celular se oculta mis menus por el icono de hamburguesa)-->
+        <ul class="navbar-nav ms-auto"> <!--ul para las lista desordenada-->
+          <li class="nav-item"> <!--li para agrupar los elementos-->
+            <a class="nav-link active" href="index.html">INICIO</a><!--la etique a para crear enlaces-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reservas.html">MIS RESERVAS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- Contenido Principal -->
+<!--esta dividido en dos columnas -->
+<!--la parte izquierda donde estan los partidos y en la derecha donde esta la imagen del estadio-->
+  <div class="main-container">
+    <div class="container-fluid">
+      <div class="row g-0">
+<!-- columna izquierda : la Lista de Partidos -->
+        <div class="col-lg-6 partidos-section">
+          <div class="encabezado-de-partidos">
+            <h1 class="tituloprincipal">CREMALINK</h1>
+            <p class="subtitulo">RESERVA TUS ENTRADAS PARA LOS PROXIMOS PARTIDOS </p>
+          </div>
+          <div class="partidos-scroll">
+            <!-- Partido 1 -->
+            <div class="partido-card">
+              <div class="encabezado-partido">
+                <span class="competicion">LaLiga</span>
+                <span class="fecha">02/11/2025</span>
+              </div>
+              <div class="partidos">
+                <div class="equipo">
+                  <img src="https://th.bing.com/th/id/OIP.PtfIzGAOyM588b2DBT8yUQHaHZ?w=200&h=199&c=7&r=0&o=7&pid=1.7&rm=3"
+                    alt="Barcelona" class="logo-de-equipo"> <!--usamos el alt para describir la imagen y usamos imagenes por su vinculo para no estar descargandolas-->
+                  <span class="nombre-de-equipo">UNIVERSITARIO</span>
+                </div>
+                <span class="vs">VS</span> <!--versus -->
+                <div class="equipo">
+                  <img src="https://w7.pngwing.com/pngs/650/679/png-transparent-alianza-lima-hd-logo.png"
+                    alt="Elche" class="logo-de-equipo">
+                  <span class="nombre-de-equipo">ALIANZA LIMA</span>
+                </div>
+              </div>
+              <button class="btn-reservar">
+                Reservar
+              </button>
+            </div>
+            <!-- Partido 2 -->
+            <div class="partido-card">
+              <div class="encabezado-partido">
+                <span class="competicion">LaLiga</span>
+                <span class="fecha">09/11/2025</span>
+              </div>
+              <div class="partidos">
+                <div class="equipo">
+                  <img src="https://th.bing.com/th/id/OIP.PtfIzGAOyM588b2DBT8yUQHaHZ?w=200&h=199&c=7&r=0&o=7&pid=1.7&rm=3"
+                    alt="Barcelona" class="logo-de-equipo">
+                  <span class="nombre-de-equipo">UNIVERSITARIO</span>
+                </div>
+                <span class="vs">VS</span> <!--versus -->
+                <div class="equipo">
+                  <img src="https://tse2.mm.bing.net/th/id/OIP.KuLDnlk5i2Q7_kdZNm5v-wHaMF?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="Athletic" class="logo-de-equipo">
+                  <span class="nombre-de-equipo">SPORTING CRISTAL</span> 
+                </div>
+              </div>
+              <button class="btn-reservar">
+                Reservar
+              </button>
+            </div>
+            <!-- Partido 3 -->
+            <div class="partido-card">
+              <div class="encabezado-partido">
+                <span class="competicion">LaLiga</span>
+                <span class="fecha">16/11/2025</span>
+              </div>
+              <div class="partidos">
+                <div class="equipo">
+                  <img src="https://th.bing.com/th/id/OIP.PtfIzGAOyM588b2DBT8yUQHaHZ?w=200&h=199&c=7&r=0&o=7&pid=1.7&rm=3"
+                    alt="Barcelona" class="logo-de-equipo">
+                  <span class="nombre-de-equipo">UNIVERSITARIO</span>
+                </div>
+                <span class="vs">VS</span> <!--versus -->
+                <div class="equipo">
+                  <img src="https://th.bing.com/th/id/OIP.hOSoUgoBJ_OZpbfTAuCltQAAAA?w=187&h=187&c=7&r=0&o=7&pid=1.7&rm=3"
+                    alt="Alavés" class="logo-de-equipo">
+                  <span class="nombre-de-equipo">FC MELGAR</span>
+                </div>
+              </div>
+              <button class="btn-reservar">
+                Reservar
+              </button>
+            </div>
+            <!-- Partido 4 -->
+            <div class="partido-card">
+              <div class="encabezado-partido">
+                <span class="competicion">LaLiga</span>
+                <span class="fecha">23/11/2025</span>
+              </div>
+              <div class="partidos">
+                <div class="equipo">
+                  <img src="https://th.bing.com/th/id/OIP.PtfIzGAOyM588b2DBT8yUQHaHZ?w=200&h=199&c=7&r=0&o=7&pid=1.7&rm=3"
+                    alt="Barcelona" class="logo-de-equipo">
+                  <span class="nombre-de-equipo">UNIVERSITARIO</span>
+                </div>
+                <span class="vs">VS</span> <!--versus -->
+                <div class="equipo">
+                  <img src="https://th.bing.com/th/id/OIP.k4bb9RmmUW7TPCLpyeJGNgHaHa?w=166&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
+                    alt="Osasuna" class="logo-de-equipo">
+                  <span class="nombre-de-equipo">SPOR BOIS</span>
+                </div>
+              </div>
+              <button class="btn-reservar">
+                Reservar
+              </button>
+            </div>
+            <!-- Partido 5 -->
+            <div class="partido-card">
+              <div class="encabezado-partido">
+                <span class="competicion">LaLiga</span>
+                <span class="fecha">30/11/2025</span>
+              </div>
+              <div class="partidos">
+                <div class="equipo">
+                  <img src="https://th.bing.com/th/id/OIP.PtfIzGAOyM588b2DBT8yUQHaHZ?w=200&h=199&c=7&r=0&o=7&pid=1.7&rm=3"
+                    alt="Barcelona" class="logo-de-equipo">
+                  <span class="nombre-de-equipo">UNIVERSITARIO</span>
+                </div>
+                <span class="vs">VS</span> <!--versus -->
+                <div class="equipo">
+                  <img src="https://th.bing.com/th/id/OIP.3ZYpk9A30u2leOKCnK6XpQHaHa?w=154&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
+                    alt="Atlético Madrid" class="logo-de-equipo">
+                  <span class="nombre-de-equipo">CIENCIANO</span>
+                </div>
+              </div>
+              <button class="btn-reservar">
+                Reservar
+              </button>
+            </div>
+          </div>
+        </div>
+<!-- columna Derecha : imagen del estadio -->
+        <div class="col-lg-6 estadio-section">
+          <div class="contenedor-estadio-jugador">
+            <img
+              src="https://www.sopitas.com/wp-content/uploads/2023/11/universitario-deportes-campeon.jpg?resize=819,1024"
+              alt="Camp Nou" class="estadio-img">
+            <div class="imagenes-principales">
+              <h2>TRICAMPEONES</h2> <!--imagen del estadio-->
+              <p> </p> <!--frasse-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- nuestro modal (una ventana encima de otra , la que va salir cuando demos click en reservar)-->
+  <div class="modal fade" id="modalReserva" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Partido</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="partido-info-modal">
+            <p><strong>Fecha:</strong> <span id="modalFecha"></span></p>
+            <p><strong>Competición:</strong> <span id="modalCompeticion"></span></p>
+          </div>
+          <div class="tipo-entrada-section">
+            <h6>Tipo de Entrada</h6>
+            <div class="opcciones-de-entradas">
+              <div class="eleccion-de-entrada">
+                <input type="radio" name="tipoEntrada" id="normal" value="normal" checked hidden><!--hidden es para ocultar nuestro modal-->
+                <label for="normal">
+                  <span class="entrada-nombre">Normal</span>
+                  <span class="precio-de-entrada">€45</span> <!--PRECIO DE LA ENTRADA NORMAL-->
+                </label>
+              </div>
+              <div class="eleccion-de-entrada">
+                <input type="radio" name="tipoEntrada" id="premium" value="premium" hidden>
+                <label for="premium">
+                  <span class="entrada-nombre">Premium</span> <!--PRECIO DE LA ENTRADA PREMIUN-->
+                  <span class="precio-de-entrada">€85</span>
+                </label>
+              </div>
+              <div class="eleccion-de-entrada">
+                <input type="radio" name="tipoEntrada" id="vip" value="vip" hidden>
+                <label for="vip">
+                  <span class="entrada-nombre">VIP</span> <!--PRECIO DE LA ENTRADA VIP-->
+                  <span class="precio-de-entrada">€150</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="seccion-cantidad">
+            <label for="cantidad">Cantidad de Entradas</label>
+            <input type="number" id="cantidad" min="1" max="10" value="1">
+          </div>
+          <div class="seccion-total">
+            <h6>Total: <span id="totalPrecio">€45</span></h6>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="btnConfirmar">Confirmar Reserva</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--CREAMOS NUESTRO FOOTER (LA PARTE FINAL DE NUESTRA PAGINA WEB (EL PIE))-->
+  <footer class="footer text-center"> <!--centramos nuestro footer-->
+    <p>CREMALINK | Todos los derechos reservados ⚽</p>
+    <p>TELEFONO : 61198</p>
+    <p>SEDE : VILLA EL SALVADOR</p>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!--el scritp de bootstrap-->
+<script src="javascritp.js"></script>
+</body>
+</html>
